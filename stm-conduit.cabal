@@ -16,6 +16,9 @@ Build-type:          Simple
 Cabal-version:       >=1.8
 
 Library
+    hs-source-dirs:
+        src/
+
     exposed-modules:
         Data.Conduit.Async
         Data.Conduit.TMChan
@@ -49,16 +52,16 @@ Library
 
 test-suite stm-conduit-doctests
     type:           exitcode-stdio-1.0
-    main-is:        DocTest.hs
+    main-is:        Main.hs
     ghc-options:    -threaded
-    hs-source-dirs: test/
-                    ./
+    hs-source-dirs: doctest/
+                    src/
     build-depends:  base
                   , doctest
 
 test-suite stm-conduit-tests
     type:           exitcode-stdio-1.0
-    main-is:        Test.hs
+    main-is:        Main.hs
     hs-source-dirs: test/
 
     ghc-options:    -rtsopts=all -threaded

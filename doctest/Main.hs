@@ -9,5 +9,5 @@ main = doctest [
   , "-idist/build/autogen/"
   , "-optP-include"
   , "-optPdist/build/autogen/cabal_macros.h"
-  , "Data/Conduit/Async/Composition.hs"
+  , "src/Data/Conduit/Async/Composition.hs"
   ]
